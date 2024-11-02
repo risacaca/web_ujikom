@@ -1,0 +1,10 @@
+<?php
+	require('../config/global_function.php');
+	require('../config/connection.php');
+	session_start();
+	if($_SESSION['status']!="login"){
+		header("location:../index.php?error=auth");
+	}else{
+		header("location:../admin/home.php");
+	}
+?>
